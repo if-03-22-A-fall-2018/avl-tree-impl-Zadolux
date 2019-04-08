@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "node.h"
 
 struct NodeImplementation
@@ -46,5 +46,12 @@ void set_height(Node node, int height)
 
 Node create_node(int key)
 {
-  return 0;
+  Node newNode = (Node) malloc(sizeof(struct NodeImplementation));
+
+  newNode->key = key;
+  newNode->left = 0;
+  newNode->right = 0;
+  newNode->height = 1;
+
+  return newNode;
 }
