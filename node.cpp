@@ -1,14 +1,6 @@
 #include <stdlib.h>
 #include "node.h"
 
-struct NodeImplementation
-{
-  int key;
-  Node left;
-  Node right;
-  int height;
-};
-
 int get_key(Node node)
 {
   if(node != 0)

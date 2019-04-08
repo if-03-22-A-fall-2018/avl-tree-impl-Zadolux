@@ -23,6 +23,8 @@ int	max(int n1, int n2);
 Node rotate_right(Node node);
 int	get_balance(Node node);
 void print_postorder(Node node);
-void unbalanced_insert(Node root, int key);
+
+// Documentation says that the data type is void??
+Node unbalanced_insert(Node root, int key);
 
 #endif //BALANCEDTREE_AVL_TREE_H
