@@ -11,6 +11,9 @@ struct NodeImplementation
 
 int get_key(Node node)
 {
+  if(node != 0)
+    return node->key;
+    
   return 0;
 }
 
