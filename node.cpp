@@ -29,8 +29,6 @@ void set_left(Node node, Node left_node)
 {
   if(node != 0)
     node->left = left_node;
-
-  return;
 }
 
 Node get_right(Node node)
@@ -45,18 +43,20 @@ void set_right(Node node, Node right_node)
 {
   if(node != 0)
     node->right = right_node;
-
-  return;
 }
 
 int get_height(Node node)
 {
+  if(node != 0)
+    return node->height;
+
   return 0;
 }
 
 void set_height(Node node, int height)
 {
-
+  if(node != 0)
+    node->height = height;
 }
 
 Node create_node(int key)
