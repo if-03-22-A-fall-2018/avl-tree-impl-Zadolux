@@ -13,28 +13,40 @@ int get_key(Node node)
 {
   if(node != 0)
     return node->key;
-    
+
   return 0;
 }
 
 Node get_left(Node node)
 {
+  if(node != 0)
+    return node->left;
+
   return 0;
 }
 
 void set_left(Node node, Node left_node)
 {
+  if(node != 0)
+    node->left = left_node;
 
+  return;
 }
 
 Node get_right(Node node)
 {
+  if(node != 0)
+    return node->right;
+
   return 0;
 }
 
 void set_right(Node node, Node right_node)
 {
+  if(node != 0)
+    node->right = right_node;
 
+  return;
 }
 
 int get_height(Node node)
