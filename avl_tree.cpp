@@ -59,7 +59,7 @@ Node rotate_left(Node node){
 
 int	max(int n1, int n2)
 {
-  return 0;
+  return n1 > n2 ? n1 : n2;
 }
 
 Node rotate_right(Node node)
