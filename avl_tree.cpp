@@ -3,12 +3,13 @@
 
 Node insert(Node node, int key){
     if (node == 0){
-        //TODO
+        node = create_node(key);
     }
 
     if (key < get_key(node)){
         set_left(node, insert(get_left(node), key));
     } else if (key > get_key(node)){
+        set_right(node, insert(get_left(node), key));
         //TODO
     } else {
         // no duplicate keys
@@ -64,7 +65,20 @@ int	max(int n1, int n2)
 
 Node rotate_right(Node node)
 {
-  return 0;
+  if (node == 0){
+      return 0;
+  }
+
+  Node l = get_left(node);
+  Node r = get_right(l);
+
+  set_right(l, node);
+  set_left(node, r);
+
+  set_height(node, max(get_height(get_left(node)), get_height(get_right(node))) + 1);
+  set_height(r, max(get_height(get_left(r)), get_height(get_right(r))) + 1);
+
+  return l;
 }
 
 int	get_balance(Node node)
